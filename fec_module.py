@@ -24,7 +24,8 @@ from reedsolo import RSCodec
 # Defaults: 32 parity -> corrects 16 byte-errors per 255-byte block (~6%).
 # For harsher compression (high CRF), raise RS_PARITY (e.g. 64, 96).
 RS_N      = 255
-RS_PARITY = 32
+# RS_PARITY = 32
+RS_PARITY = 64
 RS_K      = RS_N - RS_PARITY            # 223 data bytes per codeword
 _rsc      = RSCodec(RS_PARITY)
 
